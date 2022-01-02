@@ -152,14 +152,11 @@ mainTL
 
 //alias
 const gnbList = $("#gnb > .list > li");
+const header = $("#header");
 // const gnbList = document.querySelectorAll("#gnb > .list > li");
 gnbList.on("mouseenter", function () {
-    // callback함수
-    console.log("this", this);
-    console.log("$(this)", $(this)); //wrapping
-    $(this).find(".depth02").stop().slideDown(200);
+    header.addClass("open");
 });
-
 gnbList.on("mouseleave", function () {
-    $(this).find(".depth02").stop().slideUp(100);
+    header.removeClass("open");
 });

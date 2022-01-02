@@ -155,11 +155,39 @@ const gnbList = $("#gnb > .list > li");
 // const gnbList = document.querySelectorAll("#gnb > .list > li");
 gnbList.on("mouseenter", function () {
     // callback함수
-    console.log("this", this);
-    console.log("$(this)", $(this)); //wrapping
+    // console.log("this", this);
+    // console.log("$(this)", $(this)); //wrapping
     $(this).find(".depth02").stop().slideDown(200);
 });
 
 gnbList.on("mouseleave", function () {
     $(this).find(".depth02").stop().slideUp(100);
+});
+
+$(window).on("mousemove", function (e) {
+    // console.log("e", e);
+    gsap.to("#cursor", {
+        left: e.clientX - $("#cursor").width() / 2,
+        top: e.clientY - $("#cursor").height() / 2,
+        ease: "power3",
+        duration: 1,
+    });
+});
+
+const header = $("#header");
+
+$(window).on("scroll", function () {
+    // console.log("scrollTop", $(window).scrollTop());
+    // console.log("height", $(document).height());
+    const st = $(window).scrollTop();
+    if (st > 0) header.addClass("scroll");
+    else header.removeClass("scroll");
+});
+
+$(".tabBox .tabMenu li").on("click", function () {
+    const idx = $(this).index();
+    $(this).addClass("on").siblings("li").removeClass("on");
+    const selectTabContents = $(this).parents(".tabMenu").siblings(".tabContents").find(">ul>li").eq(idx);
+    selectTabContents.show().siblings("li").hide();
+    //show() css display: block
 });

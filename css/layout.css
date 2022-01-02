@@ -93,3 +93,7 @@ img { vertical-align: top; }
 .btnTop { background-color: #bf0c14; width: 80px; height: 80px; position: fixed; right: 50px; bottom: -100px; color: #fff; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; }
 
 .btnTop.on { bottom: 50px; }
+
+#cursor { width: 100px; height: 100px; border-radius: 1000px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-color: #bf0c14; position: fixed; left: 300px; top: 300px; z-index: 99999; color: #fff; font-weight: 900; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
+
+body { cursor: none; }

@@ -36,6 +36,12 @@ article { padding: 50px 0; }
 
 #main #mainVisual .iconScroll .txt { color: #fff; text-transform: uppercase; font-weight: 500; font-size: 1.2rem; }
 
+#main #mainVisual .paginationBox { position: absolute; bottom: 250px; width: 100%; z-index: 200; }
+
+#main #mainVisual .paginationBox .pagination .swiper-pagination-bullet { width: 20px; height: 20px; opacity: 1; border: 3px solid #fff; background-color: transparent; border-radius: 100px; -webkit-transition: 0.5s ease; transition: 0.5s ease; }
+
+#main #mainVisual .paginationBox .pagination .swiper-pagination-bullet-active { background-color: #fff; width: 120px; }
+
 #main #quickMenu { padding-top: 0; }
 
 #main #quickMenu .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }

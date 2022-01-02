@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <script src="../js/gsap/gsap.min.js"></script>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+            }
+            #red {
+                background-color: #f00;
+            }
+            #green {
+                background-color: #0f0;
+            }
+            #blue {
+                background-color: #00f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="red">RED</div>
+        <div class="box" id="green">GREEN</div>
+        <div class="box" id="blue">BLUE</div>
+        <script>
+            gsap.to(".box", {
+                x: 500, //x transform:translateX()
+                backgroundColor: "#000",
+                ease: "elastic",
+                duration: 1.5,
+                delay: 1,
+                stagger: 0.1,
+            });
+            /*
+            gsap.to("#green", {
+                marginLeft: 500,
+                backgroundColor: "#000",
+                ease: "elastic",
+                duration: 1.5,
+                delay: 1.2,
+            });
+            gsap.to("#blue", {
+                marginLeft: 500,
+                backgroundColor: "#000",
+                ease: "elastic",
+                duration: 1.5,
+                delay: 1.4,
+            });
+            */
+        </script>
+    </body>
+</html>
